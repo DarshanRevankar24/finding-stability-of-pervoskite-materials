@@ -29,6 +29,16 @@ app = FastAPI(
     version="2.1.0"
 )
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # for development
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # --- 1. LOAD MODEL & DATABASES ---
 try:
     pack = joblib.load('perovskite_model_pack.pkl')
