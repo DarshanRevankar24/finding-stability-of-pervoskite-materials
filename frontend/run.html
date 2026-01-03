@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Perovskite Stability Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .checkbox {
+      margin-top: 10px;
+    }
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1e40af;
+    }
+    .result {
+      margin-top: 25px;
+      padding: 15px;
+      background: #f1f5f9;
+      border-radius: 8px;
+      display: none;
+    }
+    .error {
+      color: red;
+      margin-top: 15px;
+    }
+    .key {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Perovskite Stability Predictor</h1>
+
+    <label for="formula">Chemical Formula</label>
+    <input type="text" id="formula" placeholder="e.g. BaTiO3, CsPbI3" />
+
+    <div class="checkbox">
+      <input type="checkbox" id="details" />
+      <label for="details" style="display:inline; font-weight:normal">Include detailed metrics</label>
+    </div>
+
+    <button onclick="predict()">Predict Stability</button>
+
+    <div id="error" class="error"></div>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    const API_BASE_URL = "http://localhost:8000"; // change if deployed
+
+    async function predict() {
+      const formula = document.getElementById("formula").value.trim();
+      const includeDetails = document.getElementById("details").checked;
+      const resultDiv = document.getElementById("result");
+      const errorDiv = document.getElementById("error");
+
+      resultDiv.style.display = "none";
+      errorDiv.textContent = "";
+
+      if (!formula) {
+        errorDiv.textContent = "Please enter a chemical formula.";
+        return;
+      }
+
+      try {
+        const response = await fetch(`${API_BASE_URL}/predict`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            formula: formula,
+            include_details: includeDetails
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error("Prediction failed");
+        }
+
+        const data = await response.json();
+        renderResult(data);
+      } catch (err) {
+        errorDiv.textContent = "Error: " + err.message;
+      }
+    }
+
+    function renderResult(data) {
+      const resultDiv = document.getElementById("result");
+
+      let html = `
+        <p><span class="key">Formula:</span> ${data.formula}</p>
+        <p><span class="key">Energy Above Hull:</span> ${data.energy_above_hull} meV/atom</p>
+        <p><span class="key">Stability Class:</span> ${data.stability_class}</p>
+        <p><span class="key">Confidence:</span> ${data.confidence}</p>
+        <p><span class="key">Elements Found:</span> ${data.elements_found.join(", ")}</p>
+        <p><span class="key">Elements Missing:</span> ${data.elements_missing.length ? data.elements_missing.join(", ") : "None"}</p>
+      `;
+
+      if (data.stability_metrics) {
+        html += `
+          <hr />
+          <p><span class="key">Goldschmidt Tolerance:</span> ${data.stability_metrics.goldschmidt_tolerance ?? "N/A"}</p>
+          <p><span class="key">Octahedral Factor:</span> ${data.stability_metrics.octahedral_factor ?? "N/A"}</p>
+          <p><span class="key">Formation Energy Estimate:</span> ${data.stability_metrics.formation_energy_estimate ?? "N/A"}</p>
+        `;
+      }
+
+      if (data.recommendations) {
+        html += `<hr /><p class="key">Recommendations:</p><ul>`;
+        data.recommendations.forEach(r => {
+          html += `<li>${r}</li>`;
+        });
+        html += `</ul>`;
+      }
+
+      resultDiv.innerHTML = html;
+      resultDiv.style.display = "block";
+    }
+  </script>
+</body>
+</html>
