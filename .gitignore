@@ -1,6 +1,6 @@
-./Perovskite_Stability_with_features.csv
-./check_training_data.py
-./diagnose_model.py
-./fix_radii.py
-./test_client.py
-./json_utility.py
+Perovskite_Stability_with_features.csv
+check_training_data.py
+diagnose_model.py
+fix_radii.py
+test_client.py
+json_utility.py
