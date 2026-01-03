@@ -1,0 +1,571 @@
+{
+  "_metadata": {
+    "version": "2.0.0",
+    "description": "Comprehensive atomic properties database for perovskite stability calculations",
+    "last_updated": "2025-01-04",
+    "units": {
+      "radius": "angstroms",
+      "weight": "amu",
+      "en": "Pauling scale",
+      "ionization_energy": "eV",
+      "electron_affinity": "eV"
+    }
+  },
+  "A_site_elements": {
+    "Ba": {
+      "radius": 1.61,
+      "ionic_radius": 1.61,
+      "weight": 137.33,
+      "en": 0.89,
+      "ionization_energy": 5.21,
+      "electron_affinity": 0.14,
+      "oxidation_states": [
+        2
+      ],
+      "coordination": 12,
+      "element_type": "alkaline_earth"
+    },
+    "Sr": {
+      "radius": 1.44,
+      "ionic_radius": 1.44,
+      "weight": 87.62,
+      "en": 0.95,
+      "ionization_energy": 5.69,
+      "electron_affinity": 0.05,
+      "oxidation_states": [
+        2
+      ],
+      "coordination": 12,
+      "element_type": "alkaline_earth"
+    },
+    "Ca": {
+      "radius": 1.34,
+      "ionic_radius": 1.34,
+      "weight": 40.08,
+      "en": 1.0,
+      "ionization_energy": 6.11,
+      "electron_affinity": 0.02,
+      "oxidation_states": [
+        2
+      ],
+      "coordination": 12,
+      "element_type": "alkaline_earth"
+    },
+    "Pb": {
+      "radius": 1.49,
+      "ionic_radius": 1.49,
+      "weight": 207.2,
+      "en": 2.33,
+      "ionization_energy": 7.42,
+      "electron_affinity": 0.36,
+      "oxidation_states": [
+        2,
+        4
+      ],
+      "coordination": 12,
+      "element_type": "post_transition_metal"
+    },
+    "Cs": {
+      "radius": 1.88,
+      "ionic_radius": 1.88,
+      "weight": 132.91,
+      "en": 0.79,
+      "ionization_energy": 3.89,
+      "electron_affinity": 0.47,
+      "oxidation_states": [
+        1
+      ],
+      "coordination": 12,
+      "element_type": "alkali"
+    },
+    "K": {
+      "radius": 1.38,
+      "ionic_radius": 1.38,
+      "weight": 39.1,
+      "en": 0.82,
+      "ionization_energy": 4.34,
+      "electron_affinity": 0.5,
+      "oxidation_states": [
+        1
+      ],
+      "coordination": 12,
+      "element_type": "alkali"
+    },
+    "Rb": {
+      "radius": 1.52,
+      "ionic_radius": 1.52,
+      "weight": 85.47,
+      "en": 0.82,
+      "ionization_energy": 4.18,
+      "electron_affinity": 0.49,
+      "oxidation_states": [
+        1
+      ],
+      "coordination": 12,
+      "element_type": "alkali"
+    },
+    "Na": {
+      "radius": 1.02,
+      "ionic_radius": 1.02,
+      "weight": 22.99,
+      "en": 0.93,
+      "ionization_energy": 5.14,
+      "electron_affinity": 0.55,
+      "oxidation_states": [
+        1
+      ],
+      "coordination": 12,
+      "element_type": "alkali"
+    },
+    "La": {
+      "radius": 1.03,
+      "ionic_radius": 1.03,
+      "weight": 138.91,
+      "en": 1.1,
+      "ionization_energy": 5.58,
+      "electron_affinity": 0.47,
+      "oxidation_states": [
+        3
+      ],
+      "coordination": 12,
+      "element_type": "lanthanide"
+    },
+    "Ce": {
+      "radius": 1.01,
+      "ionic_radius": 1.01,
+      "weight": 140.12,
+      "en": 1.12,
+      "ionization_energy": 5.54,
+      "electron_affinity": 0.5,
+      "oxidation_states": [
+        3,
+        4
+      ],
+      "coordination": 12,
+      "element_type": "lanthanide"
+    },
+    "Nd": {
+      "radius": 0.98,
+      "ionic_radius": 0.98,
+      "weight": 144.24,
+      "en": 1.14,
+      "ionization_energy": 5.53,
+      "electron_affinity": 0.5,
+      "oxidation_states": [
+        3
+      ],
+      "coordination": 12,
+      "element_type": "lanthanide"
+    },
+    "Y": {
+      "radius": 0.9,
+      "ionic_radius": 0.9,
+      "weight": 88.91,
+      "en": 1.22,
+      "ionization_energy": 6.22,
+      "electron_affinity": 0.31,
+      "oxidation_states": [
+        3
+      ],
+      "coordination": 12,
+      "element_type": "transition_metal"
+    },
+    "Bi": {
+      "radius": 1.03,
+      "ionic_radius": 1.03,
+      "weight": 208.98,
+      "en": 2.02,
+      "ionization_energy": 7.29,
+      "electron_affinity": 0.95,
+      "oxidation_states": [
+        3,
+        5
+      ],
+      "coordination": 12,
+      "element_type": "post_transition_metal"
+    }
+  },
+  "B_site_elements": {
+    "Ti": {
+      "radius": 0.605,
+      "ionic_radius": 0.605,
+      "weight": 47.87,
+      "en": 1.54,
+      "ionization_energy": 6.83,
+      "electron_affinity": 0.08,
+      "oxidation_states": [
+        2,
+        3,
+        4
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 2
+    },
+    "Zr": {
+      "radius": 0.72,
+      "ionic_radius": 0.72,
+      "weight": 91.22,
+      "en": 1.33,
+      "ionization_energy": 6.63,
+      "electron_affinity": 0.43,
+      "oxidation_states": [
+        4
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 2
+    },
+    "V": {
+      "radius": 0.64,
+      "ionic_radius": 0.64,
+      "weight": 50.94,
+      "en": 1.63,
+      "ionization_energy": 6.75,
+      "electron_affinity": 0.53,
+      "oxidation_states": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 3
+    },
+    "Nb": {
+      "radius": 0.68,
+      "ionic_radius": 0.68,
+      "weight": 92.91,
+      "en": 1.6,
+      "ionization_energy": 6.76,
+      "electron_affinity": 0.89,
+      "oxidation_states": [
+        3,
+        5
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 4
+    },
+    "Ta": {
+      "radius": 0.68,
+      "ionic_radius": 0.68,
+      "weight": 180.95,
+      "en": 1.5,
+      "ionization_energy": 7.55,
+      "electron_affinity": 0.32,
+      "oxidation_states": [
+        5
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 3
+    },
+    "Mn": {
+      "radius": 0.53,
+      "ionic_radius": 0.53,
+      "weight": 54.94,
+      "en": 1.55,
+      "ionization_energy": 7.43,
+      "electron_affinity": 0.0,
+      "oxidation_states": [
+        2,
+        3,
+        4,
+        7
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 5
+    },
+    "Fe": {
+      "radius": 0.585,
+      "ionic_radius": 0.585,
+      "weight": 55.85,
+      "en": 1.83,
+      "ionization_energy": 7.9,
+      "electron_affinity": 0.15,
+      "oxidation_states": [
+        2,
+        3
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 6
+    },
+    "Co": {
+      "radius": 0.545,
+      "ionic_radius": 0.65,
+      "weight": 58.93,
+      "en": 1.88,
+      "ionization_energy": 7.88,
+      "electron_affinity": 0.66,
+      "oxidation_states": [
+        2,
+        3
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 7
+    },
+    "Ni": {
+      "radius": 0.49,
+      "ionic_radius": 0.69,
+      "weight": 58.69,
+      "en": 1.91,
+      "ionization_energy": 7.64,
+      "electron_affinity": 1.16,
+      "oxidation_states": [
+        2,
+        3
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 8
+    },
+    "Cu": {
+      "radius": 0.57,
+      "ionic_radius": 0.73,
+      "weight": 63.55,
+      "en": 1.9,
+      "ionization_energy": 7.73,
+      "electron_affinity": 1.24,
+      "oxidation_states": [
+        1,
+        2
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 10
+    },
+    "Sn": {
+      "radius": 0.69,
+      "ionic_radius": 0.69,
+      "weight": 118.71,
+      "en": 1.96,
+      "ionization_energy": 7.34,
+      "electron_affinity": 1.11,
+      "oxidation_states": [
+        2,
+        4
+      ],
+      "coordination": 6,
+      "element_type": "post_transition_metal",
+      "d_electrons": 10
+    },
+    "Ga": {
+      "radius": 0.62,
+      "ionic_radius": 0.62,
+      "weight": 69.72,
+      "en": 1.81,
+      "ionization_energy": 6.0,
+      "electron_affinity": 0.43,
+      "oxidation_states": [
+        3
+      ],
+      "coordination": 6,
+      "element_type": "post_transition_metal",
+      "d_electrons": 10
+    },
+    "Al": {
+      "radius": 0.535,
+      "ionic_radius": 0.535,
+      "weight": 26.98,
+      "en": 1.61,
+      "ionization_energy": 5.99,
+      "electron_affinity": 0.43,
+      "oxidation_states": [
+        3
+      ],
+      "coordination": 6,
+      "element_type": "post_transition_metal",
+      "d_electrons": 0
+    },
+    "Ge": {
+      "radius": 0.53,
+      "ionic_radius": 0.53,
+      "weight": 72.63,
+      "en": 2.01,
+      "ionization_energy": 7.9,
+      "electron_affinity": 1.23,
+      "oxidation_states": [
+        2,
+        4
+      ],
+      "coordination": 6,
+      "element_type": "metalloid",
+      "d_electrons": 10
+    },
+    "Sc": {
+      "radius": 0.745,
+      "ionic_radius": 0.745,
+      "weight": 44.96,
+      "en": 1.36,
+      "ionization_energy": 6.56,
+      "electron_affinity": 0.19,
+      "oxidation_states": [
+        3
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 1
+    },
+    "Cr": {
+      "radius": 0.615,
+      "ionic_radius": 0.615,
+      "weight": 52.0,
+      "en": 1.66,
+      "ionization_energy": 6.77,
+      "electron_affinity": 0.67,
+      "oxidation_states": [
+        2,
+        3,
+        6
+      ],
+      "coordination": 6,
+      "element_type": "transition_metal",
+      "d_electrons": 5
+    }
+  },
+  "X_site_elements": {
+    "O": {
+      "radius": 1.4,
+      "ionic_radius": 1.4,
+      "weight": 16.0,
+      "en": 3.44,
+      "ionization_energy": 13.62,
+      "electron_affinity": 1.46,
+      "oxidation_states": [
+        -2
+      ],
+      "coordination": 6,
+      "element_type": "nonmetal"
+    },
+    "F": {
+      "radius": 1.33,
+      "ionic_radius": 1.33,
+      "weight": 19.0,
+      "en": 3.98,
+      "ionization_energy": 17.42,
+      "electron_affinity": 3.4,
+      "oxidation_states": [
+        -1
+      ],
+      "coordination": 6,
+      "element_type": "halogen"
+    },
+    "Cl": {
+      "radius": 1.81,
+      "ionic_radius": 1.81,
+      "weight": 35.45,
+      "en": 3.16,
+      "ionization_energy": 12.97,
+      "electron_affinity": 3.61,
+      "oxidation_states": [
+        -1
+      ],
+      "coordination": 6,
+      "element_type": "halogen"
+    },
+    "Br": {
+      "radius": 1.96,
+      "ionic_radius": 1.96,
+      "weight": 79.9,
+      "en": 2.96,
+      "ionization_energy": 11.81,
+      "electron_affinity": 3.36,
+      "oxidation_states": [
+        -1
+      ],
+      "coordination": 6,
+      "element_type": "halogen"
+    },
+    "I": {
+      "radius": 2.2,
+      "ionic_radius": 2.2,
+      "weight": 126.9,
+      "en": 2.66,
+      "ionization_energy": 10.45,
+      "electron_affinity": 3.06,
+      "oxidation_states": [
+        -1
+      ],
+      "coordination": 6,
+      "element_type": "halogen"
+    },
+    "S": {
+      "radius": 1.04,
+      "ionic_radius": 1.84,
+      "weight": 32.06,
+      "en": 2.58,
+      "ionization_energy": 10.36,
+      "electron_affinity": 2.08,
+      "oxidation_states": [
+        -2
+      ],
+      "coordination": 6,
+      "element_type": "nonmetal"
+    },
+    "Se": {
+      "radius": 1.17,
+      "ionic_radius": 1.98,
+      "weight": 78.96,
+      "en": 2.55,
+      "ionization_energy": 9.75,
+      "electron_affinity": 2.02,
+      "oxidation_states": [
+        -2
+      ],
+      "coordination": 6,
+      "element_type": "nonmetal"
+    },
+    "N": {
+      "radius": 0.75,
+      "ionic_radius": 1.46,
+      "weight": 14.01,
+      "en": 3.04,
+      "ionization_energy": 14.53,
+      "electron_affinity": 0.07,
+      "oxidation_states": [
+        -3
+      ],
+      "coordination": 6,
+      "element_type": "nonmetal"
+    }
+  },
+  "organic_cations": {
+    "MA": {
+      "name": "methylammonium",
+      "formula": "CH3NH3",
+      "radius": 1.8,
+      "weight": 31.06,
+      "charge": 1,
+      "description": "Common in hybrid halide perovskites"
+    },
+    "FA": {
+      "name": "formamidinium",
+      "formula": "CH(NH2)2",
+      "radius": 1.9,
+      "weight": 45.06,
+      "charge": 1,
+      "description": "Larger organic cation, improved stability"
+    },
+    "EA": {
+      "name": "ethylammonium",
+      "formula": "C2H5NH3",
+      "radius": 2.0,
+      "weight": 45.08,
+      "charge": 1,
+      "description": "Used in 2D perovskites"
+    },
+    "GA": {
+      "name": "guanidinium",
+      "formula": "C(NH2)3",
+      "radius": 2.78,
+      "weight": 59.07,
+      "charge": 1,
+      "description": "Large cation for 2D structures"
+    }
+  }
+}
